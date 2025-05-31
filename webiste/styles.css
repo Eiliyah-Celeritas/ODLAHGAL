@@ -1,0 +1,91 @@
+/* Reset */
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+  }
+  
+  /* Hero section */
+  .hero {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .image1 {
+    max-width: 35%;
+    height: auto;
+  }
+  
+  /* White content section */
+  .white-section {
+    background-color: #FAF9F6;
+    color: black;
+    padding: 4rem;
+  }
+  
+  /* Section title animation */
+  .section-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    opacity: 0;
+    transform: translateY(-40px);
+    transition: all 0.8s ease-out;
+  }
+  
+  /* Content layout */
+  .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: nowrap;
+    font-size: 1.5rem;
+    font-family: "Baskerville", "Baskerville Old Face", serif;
+  }
+  
+  /* Text and image containers start hidden + offset */
+  .text,
+  .side-image {
+    opacity: 0;
+    transition: all 0.8s ease-out;
+  }
+  
+  .animate-left {
+    transform: translateX(-50px);
+  }
+  
+  .animate-right {
+    transform: translateX(50px);
+  }
+  
+  .animate-top {
+    transform: translateY(-40px);
+  }
+  
+  /* Final state when visible */
+  .in-view {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+  
+  /* Images */
+  .side-image img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+  }
+  
+  .text {
+    flex: 2;
+  }
+  
+  .side-image {
+    flex: 1;
+  }
