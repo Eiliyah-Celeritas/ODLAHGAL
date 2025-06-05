@@ -1,132 +1,63 @@
-/* Reset */
-html, body {
-    margin: 0;
-    padding: 0;
-    font-family: sans-serif;
-  }
-  
-  /* Hero section */
-  .hero {
-    background-color: black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
-  
-  .image1 {
-    max-width: 35%;
-    height: auto;
-  }
-  
-  /* White content section */
-  .white-section {
-    background-color: #FAF9F6;
-    color: black;
-    padding: 4rem;
-  }
-  
-  /* Section title animation */
-  .section-title {
-    text-align: center;
-    font-size: 2rem;
-    margin-bottom: 2rem;
-    font-family: 'Playfair Display', serif;
-    font-style: italic;
-    opacity: 0;
-    transform: translateY(-40px);
-    transition: all 0.8s ease-out;
-  }
-  
-  /* Content layout */
-  .content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 1.5rem;
-    flex-wrap: nowrap;
-    font-size: 1.4rem;
-    font-family: "Baskerville", "Baskerville Old Face", serif;
-  }
-  
-  /* Text and image containers start hidden + offset */
-  .text,
-  .side-image {
-    opacity: 0;
-    transition: all 0.8s ease-out;
-  }
-  
-  .animate-left {
-    transform: translateX(-50px);
-  }
-  
-  .animate-right {
-    transform: translateX(50px);
-  }
-  
-  .animate-top {
-    transform: translateY(-40px);
-  }
-  
-  /* Final state when visible */
-  .in-view {
-    opacity: 1;
-    transform: translate(0, 0);
-  }
-  
-  /* Images */
-  .side-image img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    object-fit: contain;
-  }
-  
-  .text {
-    flex: 2;
-  }
-  
-  .side-image {
-    flex: 1;
-  }
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  /* Mobile Styles */
-@media (max-width: 768px) {
-    /* Make hero image take full screen */
-    .image1 {
-        max-width: 100%;
-        width: 100%;
-        height: 100vh;
-        object-fit: cover;
-     
-      
-    }
-  
-    /* Reduce padding for white sections */
-    .white-section {
-      padding: 2rem 1rem;
-    }
-  
-    /* Stack content vertically */
-    .content {
-      flex-direction: column;
-      font-size: 1rem; /* Adjust text size for phones */
-      text-align: center;
-    }
-  
-    .text,
-    .side-image {
-      flex: unset;
-      width: 100%;
-    }
-  
-    .side-image img {
-      max-width: 100%;
-      height: auto;
-    }
-  
-    /* Resize the section title */
-    .section-title {
-      font-size: 1.5rem;
-    }
-  }
+body, html {
+  height: 100%;
+  font-family: 'Georgia', serif;
+  scroll-behavior: smooth;
+}
+
+/* Cover image section */
+.cover {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: black;
+}
+
+.cover-img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+}
+
+/* Title section */
+.title-section {
+  background-color: #f8f8f5;
+  padding: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40vh;
+}
+
+
+/* Title animation */
+.title {
+  font-size: 2rem;
+  color: #333;
+  opacity: 0;
+  transform: translateY(-50px);
+  transition: all 1s ease;
+  text-align: center;
+  max-width: 90%;
+}
+
+.title.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Additional content section */
+.content {
+  padding: 40px 20px;
+  font-size: 1rem;
+  line-height: 1.6;
+  background-color: #ffffff;
+}
