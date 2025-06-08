@@ -1,10 +1,16 @@
-document.addEventListener('DOMContentLoaded', () => {
-  const title = document.querySelector('.title');
+// Intersection Observer to trigger animations
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in-view');
+      }
+    });
+  },
+  { threshold: 0.2 }
+);
 
-  const revealTitle = () => {
-    title.classList.add('show');
-    window.removeEventListener('scroll', revealTitle);
-  };
-
-  window.addEventListener('scroll', revealTitle);
+// Observe all animated elements
+document.querySelectorAll('.animate-left, .animate-right, .animate-top').forEach(el => {
+  observer.observe(el);
 });
