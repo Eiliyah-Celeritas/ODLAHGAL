@@ -1,63 +1,178 @@
-/* Reset and base styles */
-* {
+/* === Base Reset and Layout Fixes === */
+html, body {
   margin: 0;
   padding: 0;
+  font-family: sans-serif;
+  overflow-x: hidden;
   box-sizing: border-box;
 }
 
-body, html {
-  height: 100%;
-  font-family: 'Georgia', serif;
-  scroll-behavior: smooth;
+*, *::before, *::after {
+  box-sizing: inherit;
 }
 
-/* Cover image section */
-.cover {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
+p {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+/* === Book Cover Section === */
+.book-cover-section {
   background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
-.cover-img {
+.book-cover {
   max-width: 100%;
   max-height: 100%;
   width: auto;
   height: auto;
 }
 
-/* Title section */
-.title-section {
-  background-color: #f8f8f5;
-  padding: 5%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 40vh;
+/* === Main Background === */
+.main-background {
+  background-color: #FAF9F6;
+  color: black;
+  padding: 4rem;
 }
 
-
-/* Title animation */
-.title {
-  font-size: 2rem;
-  color: #333;
-  opacity: 0;
-  transform: translateY(-50px);
-  transition: all 1s ease;
+/* === Section Title === */
+.section-title {
   text-align: center;
-  max-width: 90%;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  opacity: 0;
+  transform: translateY(-40px);
+  transition: all 0.8s ease-out;
 }
 
-.title.show {
+/* === Synopsis Section === */
+.synopsis-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  font-family: "Baskerville", "Baskerville Old Face", serif;
+}
+
+.synopsis-text,
+.synopsis-image {
+  width: 100%;
+  opacity: 0;
+  transition: all 0.8s ease-out;
+}
+
+.synopsis-image img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.amazon a img {
+  display: block;
+  margin: 0 auto;
+  max-width: 200px; /* Reasonable size */
+  width: 100%;
+  height: auto;
+}
+
+/* === Mailing List Section === */
+.mailing-list-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  font-family: "Baskerville", "Baskerville Old Face", serif;
+  margin-top: 2rem;
+}
+
+.mailing-list-form,
+.mailing-list-text {
+  width: 100%;
+  opacity: 0;
+  transition: all 0.8s ease-out;
+}
+
+.ml-wrapper {
+  width: 100%;
+}
+
+/* === Buy Me a Coffee Button === */
+.bmc-button-container {
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.bmc-button {
+  max-width: 200px;
+  width: 100%;
+  height: auto;
+}
+
+/* === Closing Speech === */
+.closing-speech {
+  font-family: "Baskerville", "Baskerville Old Face", serif;
+  margin-top: 2rem;
+}
+
+/* === Twitter Image === */
+.x-image {
+  opacity: 0;
+  transition: all 0.8s ease-out;
+  margin-top: 2rem;
+}
+
+.x-image img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* === Animation Classes === */
+.animate-left {
+  transform: translateX(-50px);
+}
+
+.animate-right {
+  transform: translateX(50px);
+}
+
+.animate-top {
+  transform: translateY(-40px);
+}
+
+.in-view {
   opacity: 1;
-  transform: translateY(0);
+  transform: translate(0, 0);
 }
 
-/* Additional content section */
-.content {
-  padding: 40px 20px;
-  font-size: 1rem;
-  line-height: 1.6;
-  background-color: #ffffff;
+/* === Responsive Layout: Stack sections on mobile === */
+@media screen and (min-width: 768px) {
+  .synopsis-section,
+  .mailing-list-section {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .synopsis-text {
+    flex: 2;
+  }
+
+  .synopsis-image {
+    flex: 1;
+  }
+
+  .mailing-list-form {
+    flex: 1;
+  }
+
+  .mailing-list-text {
+    flex: 2;
+  }
 }
