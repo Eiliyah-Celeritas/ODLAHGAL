@@ -36,7 +36,7 @@ p {
 .main-background {
   background-color: #FAF9F6;
   color: black;
-  padding: 4rem;
+  padding: 1rem;
 }
 
 /* === Section Title === */
@@ -87,7 +87,7 @@ p {
   flex-direction: column;
   gap: 1rem;
   font-family: "Baskerville", "Baskerville Old Face", serif;
-  margin-top: 2rem;
+  margin-top: 6rem;
 }
 
 .mailing-list-form,
