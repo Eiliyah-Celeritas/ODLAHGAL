@@ -71,14 +71,22 @@ p {
   height: auto;
   object-fit: contain;
   display: block;
+  margin-bottom: 5rem;
+}
+
+@keyframes subtle-swell {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
 }
 
 .amazon a img {
   display: block;
   margin: 0 auto;
-  max-width: 200px; /* Reasonable size */
+  max-width: 200px;
   width: 100%;
   height: auto;
+  animation: subtle-swell 2.5s ease-in-out infinite;
 }
 
 /* === Mailing List Section === */
@@ -124,6 +132,10 @@ p {
   opacity: 0;
   transition: all 0.8s ease-out;
   margin-top: 2rem;
+}
+
+p {
+  text-align: justify;
 }
 
 .x-image img {
@@ -176,3 +188,21 @@ p {
     flex: 2;
   }
 }
+.amazon a img {
+  display: block;
+  margin: 0 auto;
+  max-width: 200px; /* Reasonable size */
+  width: 50%;
+  height: auto;
+}
+
+p {
+    font-size: 0.97rem;
+  }
+  .section-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+  }
+
+
