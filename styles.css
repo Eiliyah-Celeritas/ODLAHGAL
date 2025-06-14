@@ -123,8 +123,8 @@ p {
 }
 
 .bmc-button {
-  max-width: 130px;
-  width: 100%;
+ 
+  width: 45%;
   height: auto;
 }
 
