@@ -175,7 +175,7 @@ p {
 
 @media screen and (max-width: 320px) {
   .section-title {
-    font-size: 1rem;
+    font-size: 1.5rem;
     margin-bottom: 1rem;
   }
   .synopsis-text {
@@ -187,14 +187,21 @@ p {
   .ml-wrapper {
   width: 70%;
   margin-right: 25%;
+  }
 
-  
-
+  .synopsis-image img {
+  width: 90%;
+  height: auto;
+  margin: auto;
+  object-fit: contain;
+  display: block;
+  margin-bottom: 5rem;
+  margin-top: 4%;
 }
 
 
   p {
-    font-size: 0.61rem;
+    font-size: 0.9rem;
     line-height: 1.6;
     letter-spacing: 0.05em;
     
@@ -214,7 +221,7 @@ p {
 
 @media screen and (max-width: 375px) and (min-width: 321px) {
   .section-title {
-    font-size: 1rem;
+    font-size: 1.4rem;
     margin-bottom: 1rem;
   }
   .synopsis-text {
@@ -222,17 +229,26 @@ p {
     padding-right: 10%;
     margin-top: 1rem;
   }
+  .synopsis-image img {
+  width: 95%;
+  height: auto;
+  margin: auto;
+  object-fit: contain;
+  display: block;
+  margin-bottom: 5rem;
+  margin-top: 4%;
+}
 
 
   p {
-    font-size: 0.61rem;
+    font-size: .95rem;
     line-height: 1.6;
     letter-spacing: 0.05em;
     
   }
 
   .amazon a img {
-    max-width: 110px;
+    max-width: 140px;
   }
   .x-image img {
   width: 50%;
@@ -255,7 +271,7 @@ p {
 
 @media screen and (max-width: 480px) and (min-width: 376px) {
   .section-title {
-    font-size: 1rem;
+    font-size: 1.6rem;
     margin-bottom: 1rem;
   }
   .synopsis-text {
@@ -263,17 +279,26 @@ p {
     padding-right: 10%;
     margin-top: 1rem;
   }
+  .synopsis-image img {
+  width: 75%;
+  height: auto;
+  margin: auto;
+  object-fit: contain;
+  display: block;
+  margin-bottom: 5rem;
+  margin-top: 4%;
+}
 
 
   p {
-    font-size: 0.61rem;
+    font-size: 1rem;
     line-height: 1.6;
     letter-spacing: 0.05em;
     
   }
 
   .amazon a img {
-    max-width: 110px;
+    max-width: 130px;
   }
   .x-image img {
   width: 50%;
