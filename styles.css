@@ -67,11 +67,13 @@ p {
 }
 
 .synopsis-image img {
-  width: 100%;
+  width: 60%;
   height: auto;
+  margin: auto;
   object-fit: contain;
   display: block;
   margin-bottom: 5rem;
+  margin-top: 4%;
 }
 
 @keyframes subtle-swell {
@@ -83,8 +85,7 @@ p {
 .amazon a img {
   display: block;
   margin: 0 auto;
-  max-width: 200px;
-  width: 100%;
+  width: 70%;
   height: auto;
   animation: subtle-swell 2.5s ease-in-out infinite;
 }
@@ -104,9 +105,15 @@ p {
   opacity: 0;
   transition: all 0.8s ease-out;
 }
+.mailing-list-text {
+  padding-left: 2%;
+  padding-right: 2%;
+}
 
 .ml-wrapper {
   width: 100%;
+  margin: auto;
+
 }
 
 /* === Buy Me a Coffee Button === */
@@ -116,7 +123,7 @@ p {
 }
 
 .bmc-button {
-  max-width: 200px;
+  max-width: 130px;
   width: 100%;
   height: auto;
 }
@@ -125,6 +132,8 @@ p {
 .closing-speech {
   font-family: "Baskerville", "Baskerville Old Face", serif;
   margin-top: 2rem;
+  padding-left: 2%;
+  padding-right: 2%;
 }
 
 /* === Twitter Image === */
@@ -164,20 +173,123 @@ p {
   transform: translate(0, 0);
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 320px) {
   .section-title {
-    font-size: 1.4rem;
+    font-size: 1rem;
     margin-bottom: 1rem;
   }
+  .synopsis-text {
+    padding-left: 10%;
+    padding-right: 10%;
+    margin-top: 1rem;
+  }
+
+  .ml-wrapper {
+  width: 70%;
+  margin-right: 25%;
+
+  
+
+}
+
 
   p {
-    font-size: 0.9rem;
+    font-size: 0.61rem;
+    line-height: 1.6;
+    letter-spacing: 0.05em;
     
   }
 
   .amazon a img {
-    max-width: 150px;
+    max-width: 110px;
   }
+  .x-image img {
+  width: 50%;
+  max-width: 300px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+}
+
+@media screen and (max-width: 375px) and (min-width: 321px) {
+  .section-title {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+  .synopsis-text {
+    padding-left: 10%;
+    padding-right: 10%;
+    margin-top: 1rem;
+  }
+
+
+  p {
+    font-size: 0.61rem;
+    line-height: 1.6;
+    letter-spacing: 0.05em;
+    
+  }
+
+  .amazon a img {
+    max-width: 110px;
+  }
+  .x-image img {
+  width: 50%;
+  max-width: 300px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+.ml-wrapper {
+  width: 70%;
+  margin-right: 18%;
+  
+
+  
+
+}
+}
+
+
+
+@media screen and (max-width: 480px) and (min-width: 376px) {
+  .section-title {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+  .synopsis-text {
+    padding-left: 10%;
+    padding-right: 10%;
+    margin-top: 1rem;
+  }
+
+
+  p {
+    font-size: 0.61rem;
+    line-height: 1.6;
+    letter-spacing: 0.05em;
+    
+  }
+
+  .amazon a img {
+    max-width: 110px;
+  }
+  .x-image img {
+  width: 50%;
+  max-width: 300px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+.ml-wrapper {
+  width: 70%;
+  margin-right: 15%;
+  
+
+  
+
+}
 }
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
@@ -253,7 +365,7 @@ p {
     flex: 2;
     padding-left: 10%;
     padding-right: 10%;
-    margin-top: 6rem;
+    margin-top: 5%;
   }
 
   .synopsis-image {
@@ -274,8 +386,8 @@ p {
   .amazon a img {
   display: block;
   margin: 0 auto;
-  max-width: 13rem; /* Reasonable size */
-  width: 50%;
+ /* Reasonable size */
+  width: 15%;
   height: auto;
 }
 
@@ -298,7 +410,7 @@ p {
   margin-bottom: 5rem;
 }
 .bmc-button {
-  max-width: 250px;
+  max-width: 200px;
  
 }
 .closing-speech {
@@ -317,20 +429,26 @@ p {
 
   .synopsis-text {
     flex: 2;
-    padding-left: 2%;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 1%;
   }
 
   .synopsis-image {
     flex: 1;
+    padding-right: 10%;
   }
 
   .mailing-list-form {
     flex: 1;
+    padding-left: 10%;
+    padding-top: 3%;
   }
 
   .mailing-list-text {
     flex: 2;
-    padding-right: 2%;
+    padding-right: 10%;
+    padding-left: 10%;
   }
   .amazon a img {
   display: block;
@@ -341,11 +459,13 @@ p {
 }
 
 p {
-  font-size: 2.47rem;
+  font-size: 1.78rem;
+  line-height: 1.6;
+  letter-spacing: 0.05em;
   }
   .section-title {
-    font-size: 4rem;
-    margin-bottom: 5rem;
+    font-size: 3rem;
+    margin-bottom: 6rem;
     margin-top: 5rem;
   }
 
@@ -360,7 +480,13 @@ p {
   max-width: 290px;
  
 }
+.closing-speech {
+  margin-left: 5%;
+  margin-right: 5%;
 }
+}
+
+
 
 @media screen and (min-width: 2560px)  {
   .synopsis-section,
@@ -371,41 +497,49 @@ p {
 
   .synopsis-text {
     flex: 2;
-    padding-left: 2%;
+    padding-left: 10%;
+    padding-right: 10%;
   }
 
   .synopsis-image {
     flex: 1;
-    
+    padding-right: 10%;
   }
 
   .mailing-list-form {
     flex: 1;
+    padding-right: 12%;
+    padding-top: 4%;
   }
 
   .mailing-list-text {
     flex: 2;
+    padding-right: 10%;
     
   }
   .amazon a img {
   display: block;
   margin: 0 auto;
-  max-width: 16rem; /* Reasonable size */
-  width: 50%;
-  height: auto;
+  max-width: 15%; /* Reasonable size */
+  
+ 
 }
 
 p {
-  font-size: 4.32rem;
+  font-size: 2.97rem;
+  line-height: 1.6;
+  letter-spacing: 0.05em;
+  
   }
   .section-title {
-    font-size: 7rem;
+    font-size: 5rem;
     margin-bottom: 5rem;
-    margin-top: 5rem;
+    margin-top: 10%;
+    margin-bottom: 10%;
   }
 
   .synopsis-image img {
-  width: 140%;
+  width: 120%;
   height: auto;
   object-fit: contain;
   display: block;
@@ -413,12 +547,12 @@ p {
 }
 
 .bmc-button {
-  max-width: 290px;
+  max-width: 16%;
  
 }
-
-
-
-
+.closing-speech {
+  margin-left: 5%;
+  margin-right: 5%;
+}
 }
 
