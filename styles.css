@@ -172,6 +172,7 @@ p {
 
   p {
     font-size: 0.9rem;
+    
   }
 
   .amazon a img {
@@ -188,11 +189,14 @@ p {
 
   .synopsis-text {
     flex: 2;
-    padding-left: 2%;
+    padding-left: 10%;
+    padding-right: 10%;
+    margin-top: 1rem;
   }
 
   .synopsis-image {
     flex: 1;
+    padding-right: 17%;
   }
 
   .mailing-list-form {
@@ -213,20 +217,23 @@ p {
 }
 
 p {
-  font-size: 1.5rem;
+  font-size: 0.93rem;
+  line-height: 1.6;
+    letter-spacing: 0.05em;
   }
   .section-title {
-    font-size: 2.5rem;
+    font-size: 1.5rem;
     margin-bottom: 5rem;
     margin-top: 5rem;
   }
 
   .synopsis-image img {
-  width: 130%;
+  width: 170%;
   height: auto;
   object-fit: contain;
   display: block;
   margin-bottom: 5rem;
+  
 }
 
 .closing-speech {
@@ -244,20 +251,25 @@ p {
 
   .synopsis-text {
     flex: 2;
-    padding-left: 2%;
+    padding-left: 10%;
+    padding-right: 10%;
+    margin-top: 6rem;
   }
 
   .synopsis-image {
     flex: 1;
+    padding-right: 10%;
   }
 
   .mailing-list-form {
     flex: 1;
+    padding-left: 10%;
   }
 
   .mailing-list-text {
     flex: 2;
-    padding-right: 2%;
+    padding-right: 10%;
+    padding-left: 10%;
   }
   .amazon a img {
   display: block;
@@ -268,10 +280,12 @@ p {
 }
 
 p {
-  font-size: 1.85rem;
+  font-size: 1.23rem;
+  line-height: 1.6;
+  letter-spacing: 0.05em;
   }
   .section-title {
-    font-size: 3rem;
+    font-size: 2rem;
     margin-bottom: 5rem;
     margin-top: 5rem;
   }
@@ -286,6 +300,10 @@ p {
 .bmc-button {
   max-width: 250px;
  
+}
+.closing-speech {
+  margin-left: 5%;
+  margin-right: 5%;
 }
 
 }
@@ -358,6 +376,7 @@ p {
 
   .synopsis-image {
     flex: 1;
+    
   }
 
   .mailing-list-form {
@@ -366,7 +385,7 @@ p {
 
   .mailing-list-text {
     flex: 2;
-    padding-right: 2%;
+    
   }
   .amazon a img {
   display: block;
@@ -392,6 +411,7 @@ p {
   display: block;
   margin-bottom: 5rem;
 }
+
 .bmc-button {
   max-width: 290px;
  
