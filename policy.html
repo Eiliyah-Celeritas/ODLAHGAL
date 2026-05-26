@@ -1,88 +1,425 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
-        }
-
-        .container {
-            max-width: 900px;
-            margin: 40px auto;
-            background: #fff;
-            padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        h1 {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-
-        h2 {
-            margin-top: 30px;
-            color: #222;
-        }
-
-        p {
-            margin-bottom: 15px;
-        }
-
-        footer {
-            margin-top: 40px;
-            text-align: center;
-            font-size: 14px;
-            color: #777;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy – The Monad | Little Pg Productions</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg:        #0d0f14;
+      --surface:   #13161e;
+      --border:    #1f2433;
+      --accent:    #6c8cff;
+      --accent2:   #a78bfa;
+      --text:      #e2e6f0;
+      --muted:     #7a849e;
+      --dim:       #3a4260;
+      --max-w:     720px;
+    }
+ 
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+ 
+    html { scroll-behavior: smooth; }
+ 
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 17px;
+      line-height: 1.75;
+      font-weight: 300;
+      min-height: 100vh;
+      padding: 0;
+    }
+ 
+    /* ── BACKGROUND ORBS ── */
+    body::before, body::after {
+      content: '';
+      position: fixed;
+      border-radius: 50%;
+      filter: blur(120px);
+      pointer-events: none;
+      z-index: 0;
+    }
+    body::before {
+      width: 600px; height: 600px;
+      top: -150px; left: -150px;
+      background: radial-gradient(circle, rgba(108,140,255,0.12) 0%, transparent 70%);
+    }
+    body::after {
+      width: 500px; height: 500px;
+      bottom: -100px; right: -100px;
+      background: radial-gradient(circle, rgba(167,139,250,0.10) 0%, transparent 70%);
+    }
+ 
+    /* ── HEADER ── */
+    header {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      padding: 80px 24px 60px;
+      border-bottom: 1px solid var(--border);
+    }
+ 
+    .logo-mark {
+      display: inline-block;
+      width: 52px; height: 52px;
+      border-radius: 50%;
+      background: conic-gradient(from 180deg, var(--accent), var(--accent2), var(--accent));
+      margin-bottom: 28px;
+      animation: spin 12s linear infinite;
+      opacity: 0.9;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+ 
+    header h1 {
+      font-family: 'DM Serif Display', Georgia, serif;
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 400;
+      letter-spacing: -0.5px;
+      line-height: 1.1;
+      color: #fff;
+    }
+    header h1 em {
+      font-style: italic;
+      background: linear-gradient(90deg, var(--accent), var(--accent2));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+ 
+    header .sub {
+      margin-top: 12px;
+      color: var(--muted);
+      font-size: 14px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+ 
+    header .date {
+      display: inline-block;
+      margin-top: 24px;
+      padding: 6px 16px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 99px;
+      font-size: 13px;
+      color: var(--muted);
+      letter-spacing: 0.04em;
+    }
+ 
+    /* ── LAYOUT ── */
+    main {
+      position: relative;
+      z-index: 1;
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 60px 24px 100px;
+    }
+ 
+    /* ── VRC BADGE STRIP ── */
+    .vrc-strip {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 52px;
+      padding: 20px 24px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+    }
+    .vrc-strip span {
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--muted);
+      margin-right: 4px;
+    }
+    .badge {
+      display: inline-block;
+      padding: 4px 12px;
+      border-radius: 99px;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      border: 1px solid var(--accent);
+      color: var(--accent);
+    }
+ 
+    /* ── SECTIONS ── */
+    section {
+      margin-bottom: 52px;
+      padding-bottom: 52px;
+      border-bottom: 1px solid var(--border);
+      animation: fadeUp 0.5s ease both;
+    }
+    section:last-child { border-bottom: none; }
+ 
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(18px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    section:nth-child(2)  { animation-delay: 0.05s; }
+    section:nth-child(3)  { animation-delay: 0.10s; }
+    section:nth-child(4)  { animation-delay: 0.15s; }
+    section:nth-child(5)  { animation-delay: 0.20s; }
+    section:nth-child(6)  { animation-delay: 0.25s; }
+    section:nth-child(7)  { animation-delay: 0.30s; }
+    section:nth-child(8)  { animation-delay: 0.35s; }
+    section:nth-child(9)  { animation-delay: 0.40s; }
+ 
+    .section-number {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 10px;
+    }
+ 
+    h2 {
+      font-family: 'DM Serif Display', Georgia, serif;
+      font-size: 1.55rem;
+      font-weight: 400;
+      color: #fff;
+      line-height: 1.2;
+      margin-bottom: 20px;
+    }
+ 
+    p { color: var(--text); margin-bottom: 16px; }
+    p:last-child { margin-bottom: 0; }
+ 
+    /* ── NO DATA CALLOUT ── */
+    .callout {
+      margin: 20px 0;
+      padding: 18px 22px;
+      background: rgba(108,140,255,0.07);
+      border-left: 3px solid var(--accent);
+      border-radius: 0 8px 8px 0;
+      color: var(--text);
+      font-size: 15.5px;
+    }
+ 
+    /* ── BULLET LIST ── */
+    ul.policy-list {
+      list-style: none;
+      margin: 16px 0;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    ul.policy-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: 15.5px;
+      color: var(--text);
+    }
+    ul.policy-list li::before {
+      content: '';
+      flex-shrink: 0;
+      margin-top: 8px;
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: var(--accent);
+    }
+ 
+    /* ── DELETION CARD ── */
+    .deletion-card {
+      margin-top: 24px;
+      padding: 24px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+    }
+    .deletion-card h3 {
+      font-family: 'DM Serif Display', Georgia, serif;
+      font-size: 1.05rem;
+      font-weight: 400;
+      color: #fff;
+      margin-bottom: 12px;
+    }
+    .deletion-card p { font-size: 15.5px; }
+    .deletion-card a {
+      color: var(--accent);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(108,140,255,0.35);
+      transition: border-color 0.2s;
+    }
+    .deletion-card a:hover { border-color: var(--accent); }
+ 
+    /* ── CONTACT GRID ── */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-top: 20px;
+    }
+    @media (max-width: 480px) { .contact-grid { grid-template-columns: 1fr; } }
+ 
+    .contact-item {
+      padding: 16px 20px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+    }
+    .contact-item .label {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--muted);
+      margin-bottom: 4px;
+    }
+    .contact-item .value {
+      font-size: 15px;
+      color: var(--text);
+    }
+    .contact-item a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    .contact-item a:hover { text-decoration: underline; }
+ 
+    /* ── FOOTER ── */
+    footer {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      padding: 32px 24px 48px;
+      border-top: 1px solid var(--border);
+    }
+    footer p {
+      font-size: 13px;
+      color: var(--dim);
+    }
+    footer strong { color: var(--muted); font-weight: 500; }
+  </style>
 </head>
 <body>
-
-    <div class="container">
-        <h1>Policy</h1>
-
-        <p>
-            Welcome to our privacy policy page. This page explains how we handle information,
-            user responsibilities, and the terms associated with using this website.
-        </p>
-
-        <h2>Information Collection</h2>
-        <p>
-            We may collect basic information required to improve user experience and
-            maintain website functionality.
-        </p>
-
-        <h2>Use of Information</h2>
-        <p>
-            Any information collected is used only for website functionality,
-            communication, and service improvement.
-        </p>
-
-        <h2>User Responsibilities</h2>
-        <p>
-            Users are expected to use this website responsibly and comply with all
-            applicable laws and regulations.
-        </p>
-
-        <h2>Changes to This Policy</h2>
-        <p>
-            This policy may be updated from time to time. Continued use of the website
-            indicates acceptance of any changes.
-        </p>
-
-        <footer>
-            &copy; 2026 Your Website Name. All rights reserved.
-        </footer>
+ 
+  <header>
+    <div class="logo-mark" aria-hidden="true"></div>
+    <h1><em>The Monad</em><br>Privacy Policy</h1>
+    <p class="sub">Little Pg Productions</p>
+    <span class="date">Last updated: [DATE]</span>
+  </header>
+ 
+  <main>
+ 
+    <!-- VRC COMPLIANCE BADGES -->
+    <div class="vrc-strip">
+      <span>Meta Horizon VRC compliance:</span>
+      <span class="badge">VRC.Privacy.1</span>
+      <span class="badge">VRC.Privacy.2</span>
+      <span class="badge">VRC.Privacy.3</span>
+      <span class="badge">VRC.Privacy.4</span>
     </div>
-
+ 
+    <!-- 1. INTRODUCTION -->
+    <section>
+      <p class="section-number">01</p>
+      <h2>Introduction</h2>
+      <p>Little Pg Productions ("we", "us", or "our") operates <strong>The Monad</strong> (the "App"), available on the Meta Horizon platform. This Privacy Policy explains our practices regarding any information that may be associated with your use of the App.</p>
+      <p>We are committed to protecting your privacy and handling any information responsibly and transparently. Please read this policy carefully.</p>
+    </section>
+ 
+    <!-- 2. DATA COLLECTION — VRC.Privacy.2 -->
+    <section>
+      <p class="section-number">02 &nbsp;·&nbsp; VRC.Privacy.2</p>
+      <h2>Data We Collect</h2>
+      <div class="callout">
+        <strong>The Monad does not collect, transmit, store, or share any personal data or user data</strong> from or about you. All processing required to run the App takes place locally on your device. No data is ever sent to our servers or any third-party service by us.
+      </div>
+      <p>Specifically, we do not collect:</p>
+      <ul class="policy-list">
+        <li>Personal identifiers (such as your name, email address, or User ID)</li>
+        <li>Location or movement data</li>
+        <li>Voice, microphone, or audio data</li>
+        <li>Hand-tracking or biometric data</li>
+        <li>Purchase history or payment information</li>
+        <li>Device identifiers or usage analytics</li>
+        <li>Any other data transmitted off your device</li>
+      </ul>
+    </section>
+ 
+    <!-- 3. DATA USE — VRC.Privacy.3 -->
+    <section>
+      <p class="section-number">03 &nbsp;·&nbsp; VRC.Privacy.3</p>
+      <h2>How We Use Information</h2>
+      <p>Because <strong>The Monad</strong> does not collect or store any user data, we do not use, process, share, sell, or disclose any personal information relating to you.</p>
+      <p>We do not use any third-party analytics, advertising SDKs, or tracking technologies within the App.</p>
+    </section>
+ 
+    <!-- 4. DATA DELETION — VRC.Privacy.4 -->
+    <section>
+      <p class="section-number">04 &nbsp;·&nbsp; VRC.Privacy.4</p>
+      <h2>Your Right to Request Data Deletion</h2>
+      <p>Although we do not collect or store personal data, we respect your rights fully. Any user — regardless of their country of residence — may contact us at any time to:</p>
+      <ul class="policy-list">
+        <li>Request confirmation that no data about them is held</li>
+        <li>Request deletion of any information, should any ever be inadvertently retained</li>
+      </ul>
+      <div class="deletion-card">
+        <h3>How to submit a request</h3>
+        <p>Email us at <a href="mailto:zygo@odlahgal.com">zygo@odlahgal.com</a> with the subject line <strong>"Data Deletion Request"</strong>. We will respond within 30 days. There is no fee to make this request and you are not required to provide a reason. All users, worldwide, are entitled to submit a deletion request at any time.</p>
+      </div>
+      <p style="margin-top:16px;">If you uninstall the App, all locally stored app data will be removed from your device automatically.</p>
+    </section>
+ 
+    <!-- 5. THIRD-PARTY SERVICES -->
+    <section>
+      <p class="section-number">05</p>
+      <h2>Third-Party Services</h2>
+      <p>The App is distributed through the Meta Horizon Store. Meta's own data practices are governed by Meta's Privacy Policy, which is separate from this policy. We encourage you to review Meta's Privacy Policy to understand how Meta may collect or use information in connection with the Meta platform and headset.</p>
+      <p>We do not integrate any other third-party SDKs, analytics tools, or external services within the App that would collect your data.</p>
+    </section>
+ 
+    <!-- 6. CHILDREN -->
+    <section>
+      <p class="section-number">06</p>
+      <h2>Children's Privacy</h2>
+      <p>The App is not directed at children under the age of 13 (or the relevant age of digital consent in your region). As we do not collect any personal data, we do not knowingly collect data from children. If you believe a child has provided personal information to us, please contact us immediately at <a href="mailto:zygo@odlahgal.com" style="color:var(--accent);text-decoration:none;border-bottom:1px solid rgba(108,140,255,0.35);">zygo@odlahgal.com</a> so we can take appropriate action.</p>
+    </section>
+ 
+    <!-- 7. CHANGES -->
+    <section>
+      <p class="section-number">07</p>
+      <h2>Changes to This Privacy Policy</h2>
+      <p>We may update this Privacy Policy from time to time to reflect changes in our practices or for legal and regulatory reasons. When we do, we will update the "Last updated" date at the top of this policy. We encourage you to review this policy periodically.</p>
+      <p>Continued use of the App after any update constitutes your acceptance of the revised policy.</p>
+    </section>
+ 
+    <!-- 8. CONTACT -->
+    <section>
+      <p class="section-number">08</p>
+      <h2>Contact Us</h2>
+      <p>If you have any questions, concerns, or requests relating to this Privacy Policy, please contact us:</p>
+      <div class="contact-grid">
+        <div class="contact-item">
+          <p class="label">Organisation</p>
+          <p class="value">Little Pg Productions</p>
+        </div>
+        <div class="contact-item">
+          <p class="label">App</p>
+          <p class="value">The Monad</p>
+        </div>
+        <div class="contact-item">
+          <p class="label">Email</p>
+          <p class="value"><a href="mailto:zygo@odlahgal.com">zygo@odlahgal.com</a></p>
+        </div>
+        <div class="contact-item">
+          <p class="label">Policy URL</p>
+          <p class="value">[URL WHERE THIS POLICY IS HOSTED]</p>
+        </div>
+      </div>
+    </section>
+ 
+  </main>
+ 
+  <footer>
+    <p>© Little Pg Productions &nbsp;·&nbsp; <strong>The Monad</strong> &nbsp;·&nbsp; All rights reserved</p>
+    <p style="margin-top:8px;">This policy addresses Meta Horizon VRC.Privacy.1 – VRC.Privacy.4</p>
+  </footer>
+ 
 </body>
 </html>
